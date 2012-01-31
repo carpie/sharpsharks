@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Race FanOfToast!</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <link rel="stylesheet" type="text/css" href="sharks.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+    </script>
+</head>
+
+<body id="home">
+<div id="logo"><img src="logo.png" alt="Sharp Sharks" /></div>
+<div id="gamearea">
+    <div id="fot"></div>
+    <div id="you"></div>
+    <div id="breakfast"></div>
+	<div id="problemarea">
+        <div id="startmsg">
+            <div>That pesky shark FanOfToast is after your breakfast!
+                Race him to your food by completing math problems!
+            </div>
+            <div class="centerBtn"><button id="startBtn">Start</button></div>
+        </div>
+        <div id="exercise">
+            <span id="a1"></span>
+            <span id="op"></span> <span id="a2"></span>
+            = <span><input id="solution" /></span>
+        </div>
+        <div id="fotwin">
+            <div>On no! FanOfToast ate your breakfast!</div>
+            <div class="centerBtn"><button>Play Again!</button></div>
+        </div>
+        <div id="youwin">
+            <div>Woo hoo! You saved your breakfast from FanOfToast!</div>
+            <div class="centerBtn"><button>Play Again!</button></div>
+        </div>
+	</div>
+    <div id="buttonarea">
+        <div id="settingsBtn" title="Settings"></div>
+        <div id="aboutBtn" title="About"></div>
+    </div>
+</div>
+
+<div id="dialogs">
+    
+    <div id="settingsDlg" class="dialog">
+        <div class="dialogHeader">Settings</div>
+        <div class="dialogContent">
+            <fieldset><ol>
+                <li><label class="fixed">FanOfToast course time 
+                    (seconds)</label>
+                    <input name="fottime" />
+                </li>
+                <li><label class="fixed">First digit lower limit</label>
+                    <input name="d1low" />
+                </li>
+                <li><label class="fixed">First digit upper limit</label>
+                    <input name="d1high" />
+                </li>
+                <li><label class="fixed">Second digit lower limit</label>
+                    <input name="d2low" />
+                </li>
+                <li><label class="fixed">Second digit upper limit</label>
+                    <input name="d2high" />
+                </li>
+                <li><label class="fixed">Operation</label>
+                    <input type="radio" name="op" value="+" 
+                        id="addBtn" selected /><label for="addBtn"
+                        >Addition</label>
+                    <input type="radio" name="op" value="-" 
+                        id="subBtn" selected /><label for="subBtn"
+                        >Subtraction</label>
+                </li>
+            </ol></fieldset>
+        </div>
+        <div class="buttonBar">
+            <button class="okBtn">Ok</button>
+            <button class="cancelBtn">Cancel</button>
+        </div>
+    </div>
+    
+    <div id="aboutDlg" class="dialog">
+        <div class="dialogHeader">About...</div>
+        <div class="dialogContent">
+            <a href="https://github.com/carpie/sharks">Sharp Sharks!</a>
+            v1.0<br/>
+            Copyright (c) 2012, Lee Carpenter<br/>
+            <br/>
+            <div style="float:left; margin: 0 6px"><a 
+                href="http://www.gnu.org/licenses/agpl.html"><img 
+                src="agpl3.png" alt="AGPL3" /></a>
+            </div>
+            <div>
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+            </div>
+            <br/>
+            <div>
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+            </div>
+        </div>
+        <div class="buttonBar">
+            <button class="okBtn">Ok</button>
+        </div>
+    </div>
+</div>
+
+<script src="sharks.js"></script>
+</body>
+</html>
+

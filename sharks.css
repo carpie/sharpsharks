@@ -1,0 +1,126 @@
+body {
+	margin:0; padding: 0;
+	position: relative;
+}
+#logo {
+    position: relative;
+    width: 800px; height: 60px;
+    margin: auto;
+    z-index: 99;
+}
+#gamearea {
+    position: relative;
+    width: 800px; height: 400px;
+    margin: auto;
+    border: 1px solid steelblue;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0cf), to(#03f));
+	background-image: -webkit-linear-gradient(top, #0cf, #03f);
+	background-image:    -moz-linear-gradient(top, #0cf, #03f);
+	background-image:     -ms-linear-gradient(top, #0cf, #03f);
+	background-image:      -o-linear-gradient(top, #0cf, #03f);	
+}
+
+#fot {
+    position:absolute; height: 40px; width: 60px; top: 20px; left: 0;
+    background: url(fot.png) no-repeat;
+}
+#you {
+    position:absolute; height: 40px; width: 60px; top: 90px; left: 0;
+    background: url(you.png) no-repeat;
+}
+
+#breakfast {
+	position:absolute; height: 80px; width: 80px; top: 40px; right: -80px;
+	background: url(breakfast.png) no-repeat;
+}
+
+#problemarea {
+	position: relative; top: 160px;
+	padding: 0.5em;
+	background: lightgrey;
+	margin: auto; 
+	width: 400px;
+	border-radius: 15px;
+	font-size: 50px;
+}
+
+#solution {
+	border: 1px solid steelblue; width: 100px; height: 60px;
+	font-size: 50px; text-align: center;
+}
+
+#startmsg, #fotwin, #youwin {
+	font-size: 24px;
+}
+#exercise, #fotwin, #youwin {
+	display: none;
+}
+.centerBtn {
+	text-align: center;
+}
+#problemarea button {
+	font-size: 24px; border-radius: 10px; border: 1px solid steelblue;
+	margin-top: 10px;
+}
+.correct {
+	background: lightgreen !important;
+}
+.incorrect {
+	background: red !important;
+}
+#buttonarea {
+	position: absolute; bottom: 10px; right: 10px;
+}
+#buttonarea div {
+	width: 30px; height: 30px; display: inline-block;
+}
+#settingsBtn {
+	background: url(wheel.png) no-repeat;
+}
+#aboutBtn {
+	background: url(about.png) no-repeat;
+}
+
+#dialogs {
+	display: none;
+}
+.dialog {
+	position: absolute; width: 600px; height: 320px;
+	z-index: 9991;
+	border: 1px solid steelblue; border-radius: 6px;
+	background: #fff;
+}
+.dialogMask {
+	position:absolute; z-index: 9990; opacity: 0.7; display: none;
+	background: #000; top: 0;
+}
+.dialogHeader {
+	padding: 6px; background: steelblue; color: #fff; font-size: 1.2em;
+	font-weight: bold;
+}
+.dialogContent {
+	margin: 6px;
+}
+
+.dialog fieldset {
+	border: 0; padding: 0;
+}
+.dialog li {
+	list-style-type: none;
+}
+.dialog label.fixed {
+	width: 15em; display: inline-block;
+}
+.dialog input {
+	border: 1px solid steelblue;
+}
+
+.dialog .buttonBar {
+	position: absolute; right: 4px; bottom: 4px;
+	overflow: auto;
+}
+.dialog button {
+	border: 1px solid steelblue;
+	border-radius: 10px;
+	font-size: 24px;
+}
