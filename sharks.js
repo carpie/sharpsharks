@@ -104,15 +104,25 @@
         generateProblemSet: function () {
             var range1 = settings.d1High - settings.d1Low,
                 range2 = settings.d2High - settings.d2Low,
-                i;
+                i,
+                d1,
+                d2;
             this.a1 = [];
             this.a2 = [];
             this.index = -1;
             for (i = 0; i < 10; i += 1) {
-                this.a1.push(Math.floor(Math.random() * (range1 + 1)) +
-                    settings.d1Low);
-                this.a2.push(Math.floor(Math.random() * (range2 + 1)) +
-                    settings.d2Low);
+                d1 = Math.floor(Math.random() * (range1 + 1)) +
+                    settings.d1Low;
+                d2 = Math.floor(Math.random() * (range2 + 1)) +
+                    settings.d2Low;
+                if (settings.op === '-' && d2 > d1) {
+                    // Don't do negatives
+                    this.a1.push(d2);
+                    this.a2.push(d1);
+                } else {
+                    this.a1.push(d1);
+                    this.a2.push(d2);
+                }
             }
         },
 
