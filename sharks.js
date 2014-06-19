@@ -142,8 +142,11 @@
             if (settings.op === '+') {
                 answer = parseInt($('#a1').text(), 10) +
                     parseInt($('#a2').text(), 10);
-            } else {
+            } else if (settings.op === '-') {
                 answer = parseInt($('#a1').text(), 10) -
+                    parseInt($('#a2').text(), 10);
+            } else if (settings.op === 'x') {
+                answer = parseInt($('#a1').text(), 10) *
                     parseInt($('#a2').text(), 10);
             }
 
@@ -289,7 +292,13 @@
             settings.d1High = parseInt($('input[name=d1high]').val(), 10);
             settings.d2Low = parseInt($('input[name=d2low]').val(), 10);
             settings.d2High = parseInt($('input[name=d2high]').val(), 10);
-            settings.op = $('#addBtn').is(':checked') ? '+' : '-';
+            if ($('#subBtn').is(':checked')) {
+                settings.op = '-';
+            } else if ($('#mulBtn').is(':checked')) {
+                settings.op = 'x';
+            } else {
+                settings.op = '+';
+            }
             if (typeof localStorage !== 'undefined') {
                 localStorage.setItem('sharksSettings',
                     JSON.stringify(settings));
@@ -304,6 +313,8 @@
         $('input[name=d2high]').val(settings.d2High);
         if (settings.op === '-') {
             $('#subBtn').attr('checked', 'checked');
+        } else if (settings.op === 'x') {
+            $('#mulBtn').attr('checked', 'checked');
         } else {
             $('#addBtn').attr('checked', 'checked');
         }
